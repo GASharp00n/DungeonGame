@@ -2,8 +2,13 @@ using System;
 
 class StrengthPotion
 {
-    public void applyEffect(Hero p_Hero)
+    public StrengthPotion()
     {
+        setPower = 30;
+    }
 
+    public override void applyEffect(Hero p_Hero)
+    {
+        p_Hero.setStrength(setPower);
     }
 }

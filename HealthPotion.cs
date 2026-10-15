@@ -1,9 +1,14 @@
 using System;
 
-class HealthPotion
+class HealthPotion : Item
 {
-    public void applyEffect(Hero p_Hero)
+    public HealthPotion()
     {
+        restoreValue = 30;
+    }
 
+    public override void applyEffect(Hero p_Hero)
+    {
+        p_Hero.improveHealth(restoreValue);
     }
 }

@@ -4,7 +4,7 @@ class Item
 {
     protected int m_iEffectValue;
 
-    public void applyEffect(Hero p_Hero)
+    public virtual void applyEffect(Hero p_Hero)
     {
 
     }
