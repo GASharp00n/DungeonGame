@@ -1,22 +1,17 @@
 using System;
 
-class Hero
+class Hero : Character
 {
     private int m_iStrength;
 
-    public Hero(int STR)
+    public Hero(int LP, int STR) : base(LP)
     {
         m_iStrength = STR;
-    }
-
-    private void selectWeaponFromArsenal(string p_sWeaponClassName)
-    {
 
     }
 
-    public void attack(Character p_TargetCharacter)
+    public override void attack(Character p_TargetCharacter)
     {
-
     }
 
     public void discoverEnemy(Monster p_Monster)
@@ -26,7 +21,7 @@ class Hero
 
     public void setStrength(int p_iStrength)
     {
-
+        m_iStrength = 50;
     }
 
     public void improveHealth(int p_iValue)
@@ -47,5 +42,9 @@ class Hero
     public Dungeon tryPower(Dungeon p_Dungeon)
     {
         throw new NotImplementedException();
+    }
+    private void selectWeaponFromArsenal(string p_sWeaponClassName)
+    {
+
     }
 }

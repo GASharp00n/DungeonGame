@@ -1,9 +1,13 @@
 using System;
 
-class Barbarian
+class Barbarian : Monster
 {
-    public void hitByPower(ReduceLifePower p_Power)
+    public Barbarian() : base(100)
     {
-
+        s_iNbBarbarianInstances++;
+    }
+    public override void hitByPower(ReduceLifePower p_Power)
+    {
+        p_Power.dischargeOnTarget(this);
     }
 }

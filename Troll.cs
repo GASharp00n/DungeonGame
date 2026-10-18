@@ -1,9 +1,13 @@
 using System;
 
-class Troll
+class Troll : Monster
 {
-    public void hitByPower(ReduceLifePower p_Power)
+    public Troll() : base(100)
     {
-
+        s_iNbTrollInstances++;
+    }
+    public override void hitByPower(ReduceLifePower p_Power)
+    {
+        p_Power.dischargeOnTarget(this);
     }
 }

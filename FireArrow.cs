@@ -1,6 +1,9 @@
 using System;
 
-class FireArrow
+class FireArrow : HeroWeapons
 {
+    public FireArrow(int attackValue, string name)
+    {
 
+    }
 }

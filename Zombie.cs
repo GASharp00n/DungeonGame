@@ -1,9 +1,13 @@
 using System;
 
-class Zombie
+class Zombie : Monster
 {
-    public void hitByPower(ReduceLifePower p_Power)
+    public Zombie() : base(100)
     {
-
+        s_iNbZombieInstances++;
+    }
+    public override void hitByPower(ReduceLifePower p_Power)
+    {
+        p_Power.dischargeOnTarget(this);
     }
 }

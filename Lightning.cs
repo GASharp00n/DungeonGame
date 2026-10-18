@@ -1,6 +1,9 @@
 using System;
 
-class Lightning
+class Lightning : MonsterWeapon
 {
+    public Lightning(int attackValue, string name)
+    {
 
+    }
 }

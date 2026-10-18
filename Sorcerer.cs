@@ -1,9 +1,13 @@
 using System;
 
-class Sorcerer
+class Sorcerer : Monster
 {
-    public void hitByPower(ReduceLifePower p_Power)
+    public Sorcerer() : base(100)
     {
-
+        s_iNbSorcererInstances++;
+    }
+    public override void hitByPower(ReduceLifePower p_Power)
+    {
+        p_Power.dischargeOnTarget(this);
     }
 }

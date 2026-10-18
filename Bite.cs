@@ -1,6 +1,9 @@
 using System;
 
-class Bite
+class Bite : MonsterWeapon
 {
+    public Bite(int attackValue, string name)
+    {
 
+    }
 }

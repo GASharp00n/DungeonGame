@@ -1,6 +1,9 @@
 using System;
 
-class Club
+class Club : MonsterWeapon
 {
+    public Club(int attackValue, string name)
+    {
 
+    }
 }

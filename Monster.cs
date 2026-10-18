@@ -1,6 +1,6 @@
 using System;
 
-class Monster
+class Monster : Character, Searchable
 {
     public string m_sEffectiveWeaponType;
 
@@ -16,12 +16,25 @@ class Monster
 
     private bool m_bSearchDone;
 
-    public string getEffectiveWeaponType()
+    public Item search()
     {
-        throw new NotImplementedException();
+        return null;
+    }
+    public Monster(int LP) : base(100)
+    {
     }
 
-    public void attack(Character p_TargetCharacter)
+    public string getEffectiveWeaponType()
+    {
+        return m_sEffectiveWeaponType;
+    }
+
+    public override void attack(Character p_TargetCharacter)
+    {
+
+    }
+
+    public virtual void hitByPower(ReduceLifePower p_Power)
     {
 
     }
@@ -31,8 +44,5 @@ class Monster
         return true;
     }
 
-    public void hitByPower(ReduceLifePower p_Power)
-    {
 
-    }
 }

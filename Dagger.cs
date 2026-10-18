@@ -1,6 +1,9 @@
 using System;
 
-class Dagger
+class Dagger : MonsterWeapon
 {
+    public Dagger(int attackValue, string name)
+    {
 
+    }
 }

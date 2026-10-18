@@ -1,6 +1,6 @@
 using System;
 
-class Searchable
+interface Searchable
 {
-
+    abstract Item search();
 }

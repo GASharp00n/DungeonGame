@@ -1,14 +1,14 @@
 using System;
 
-class StrengthPotion
+class StrengthPotion : Item
 {
     public StrengthPotion()
     {
-        setPower = 30;
+        m_iEffectValue = 20;
     }
 
     public override void applyEffect(Hero p_Hero)
     {
-        p_Hero.setStrength(setPower);
+        p_Hero.improveStrength(m_iEffectValue);
     }
 }

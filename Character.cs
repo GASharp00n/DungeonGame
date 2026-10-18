@@ -6,12 +6,13 @@ class Character
 {
     protected int m_iLifePoints;
 
+
     public Character(int LP)
     {
-        m_LifePoints = LP;
+        m_iLifePoints = LP;
     }
 
-    public void attack(Character p_TargetCharacter)
+    public virtual void attack(Character p_TargetCharacter)
     {
 
     }

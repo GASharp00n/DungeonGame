@@ -1,10 +1,10 @@
 using System;
 
-class HeroWeapons
+class HeroWeapons : Weapon
 {
     private int m_iAttackBonus;
 
-    public void inflictDamage(Character p_TargetCharacter)
+    public override void inflictDamage(Character p_TargetCharacter)
     {
 
     }
