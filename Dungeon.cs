@@ -5,13 +5,13 @@ class Dungeon
 {
     private Room[] m_RoomsArray;
 
-    public Monster monster;
     public Dungeon(int NbRooms, bool CreationInfo)
     {
 
         m_RoomsArray = new Room[NbRooms];
         for (int i = 0; i < NbRooms; i++)
         {
+            Monster monster;
             bool Prime = true;
             if (i <= 3)
             {
