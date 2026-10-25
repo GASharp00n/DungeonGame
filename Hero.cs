@@ -21,7 +21,7 @@ class Hero : Character
 
     public void setStrength(int p_iStrength)
     {
-        m_iStrength = 50;
+        m_iStrength = p_iStrength;
     }
 
     public void improveHealth(int p_iValue)

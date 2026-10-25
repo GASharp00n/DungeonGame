@@ -1,13 +1,8 @@
 using System;
-using System.Net.Mail;
 
 class HeroWeapons : Weapon
 {
     private int m_iAttackBonus;
-
-    public int attackValue;
-
-    public int p_iDamages;
 
     public string weaponName;
 
@@ -18,11 +13,11 @@ class HeroWeapons : Weapon
     }
     public override void inflictDamage(Character p_TargetCharacter)
     {
-        p_TargetCharacter.receiveDamages(p_iDamages);
+        p_TargetCharacter.receiveDamages(m_iAttackPoints);
     }
 
     public void setAttackBonus(int p_iBonus)
     {
-
+        m_iAttackBonus = p_iBonus;
     }
 }

@@ -4,7 +4,7 @@ class Room
 {
     private Monster m_RoomMonster;
 
-    public Room(Monster p_Monster, int indexRoom)
+    public Room(Monster p_Monster)
     {
         m_RoomMonster = p_Monster;
     }

@@ -20,7 +20,7 @@ class Monster : Character, Searchable
     {
         return null;
     }
-    public Monster(int LP) : base(100)
+    public Monster(int LP) : base(LP)
     {
     }
 
