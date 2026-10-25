@@ -4,5 +4,6 @@ class Weapon
 
     public virtual void inflictDamage(Character p_TargetCharacter)
     {
+
     }
 }

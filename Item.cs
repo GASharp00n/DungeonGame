@@ -6,7 +6,7 @@ class Item
 
     public virtual void applyEffect(Hero p_Hero)
     {
-
+        //empty cause virtual
     }
 
     public void setValue(int p_iValue)

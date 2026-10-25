@@ -2,8 +2,7 @@ using System;
 
 class Spear : HeroWeapons
 {
-    public Spear(int attackValue, string name)
+    public Spear(int attackvalue, string name) : base(attackvalue, name)
     {
-
     }
 }

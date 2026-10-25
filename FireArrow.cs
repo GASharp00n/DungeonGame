@@ -2,8 +2,8 @@ using System;
 
 class FireArrow : HeroWeapons
 {
-    public FireArrow(int attackValue, string name)
-    {
 
+    public FireArrow(int attackvalue, string name) : base(attackvalue, name)
+    {
     }
 }
