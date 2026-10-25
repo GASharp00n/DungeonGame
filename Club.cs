@@ -2,9 +2,7 @@ using System;
 
 class Club : MonsterWeapon
 {
-    public Club(int attackValue, string name)
+    public Club(int attackvalue) : base(attackvalue)
     {
-        attackValue = 10;
-        name = "Club";
     }
 }

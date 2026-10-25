@@ -3,7 +3,7 @@ using System;
 class FireArrow : HeroWeapons
 {
 
-    public FireArrow(int attackvalue, string name) : base(attackvalue, name)
+    public FireArrow(int attackvalue) : base(attackvalue)
     {
     }
 }

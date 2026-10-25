@@ -2,9 +2,7 @@ using System;
 
 class Axe : MonsterWeapon
 {
-    public Axe(int attackValue, string name)
+    public Axe(int attackvalue) : base(attackvalue)
     {
-        attackValue = 10;
-        name = "Axe";
     }
 }

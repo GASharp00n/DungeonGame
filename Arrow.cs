@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 class Arrow : HeroWeapons
 {
-    public Arrow(int attackvalue, string name) : base(attackvalue, name)
+    public Arrow(int attackvalue) : base(attackvalue)
     {
     }
 }

@@ -2,9 +2,7 @@ using System;
 
 class Bite : MonsterWeapon
 {
-    public Bite(int attackValue, string name)
+    public Bite(int attackvalue) : base(attackvalue)
     {
-        attackValue = 10;
-        name = "Bite";
     }
 }

@@ -3,13 +3,9 @@ using System;
 class HeroWeapons : Weapon
 {
     private int m_iAttackBonus;
-
-    public string weaponName;
-
-    public HeroWeapons(int p_iDamages, string p_weaponName)
+    public HeroWeapons(int p_iDamages)
     {
         m_iAttackPoints = p_iDamages;
-        weaponName = p_weaponName;
     }
     public override void inflictDamage(Character p_TargetCharacter)
     {
