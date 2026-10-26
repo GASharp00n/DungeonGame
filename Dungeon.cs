@@ -54,6 +54,14 @@ class Dungeon
                 Console.WriteLine(i + " : " + monster.GetType().Name);
             }
         }
+        if (CreationInfo)
+        {
+            Console.WriteLine("Zombie : " + Monster.s_iNbZombieInstances);
+            Console.WriteLine("Barbarian : " + Monster.s_iNbBarbarianInstances);
+            Console.WriteLine("Sorcerer : " + Monster.s_iNbSorcererInstances);
+            Console.WriteLine("Thief : " + Monster.s_iNbThiefInstances);
+            Console.WriteLine("Troll : " + Monster.s_iNbTrollInstances);
+        }
     }
 
     public Room getRoom(int RoomIndex)

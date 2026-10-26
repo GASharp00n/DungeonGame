@@ -7,5 +7,9 @@ class Program
         Hero hero = new Hero(200, 25);
         Dungeon D = new Dungeon(25, true);
         D.greetHeros(hero);
+        HealthPotion healthpotion = new HealthPotion();
+        healthpotion.applyEffect(hero);
+        StrengthPotion strengthpotion = new StrengthPotion();
+        strengthpotion.applyEffect(hero);
     }
 }

@@ -26,12 +26,14 @@ class Hero : Character
 
     public void improveHealth(int p_iValue)
     {
-
+        m_iLifePoints += p_iValue;
+        Console.WriteLine("Hero has been restored " + p_iValue + " life points, he has now " + m_iLifePoints + " total life points");
     }
 
     public void improveStrength(int p_iValue)
     {
-
+        m_iStrength += p_iValue;
+        Console.WriteLine("Hero has been restored " + p_iValue + " strength points, he has now " + m_iStrength + " total strength");
     }
 
     public void searchForPotions(Searchable p_Searchable)
