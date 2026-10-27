@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.Security.Cryptography.X509Certificates;
 
 class Dungeon
@@ -76,6 +77,11 @@ class Dungeon
 
     public Monster[] getAllMonstersFromDungeon()
     {
-        return null;
+        Monster[] monsters = new Monster[m_RoomsArray.Length];
+        for (int i = 0; i < m_RoomsArray.Length; i++)
+        {
+            monsters[i] = m_RoomsArray[i].getMonster();
+        }
+        return monsters;
     }
 }

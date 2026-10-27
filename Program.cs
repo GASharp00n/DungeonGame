@@ -11,5 +11,9 @@ class Program
         healthpotion.applyEffect(hero);
         StrengthPotion strengthpotion = new StrengthPotion();
         strengthpotion.applyEffect(hero);
+        Monster[] monsters = D.getAllMonstersFromDungeon();
+        Console.WriteLine(monsters.Length);
+        Console.WriteLine(monsters[0].GetType().Name);
+        Console.WriteLine(monsters[24].GetType().Name);
     }
 }
