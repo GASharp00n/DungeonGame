@@ -6,6 +6,7 @@ class Character
 {
     protected int m_iLifePoints;
 
+    protected Weapon m_Weapon;
 
     public Character(int LP)
     {
