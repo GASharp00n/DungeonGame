@@ -12,6 +12,7 @@ class Hero : Character
 
     public override void attack(Character p_TargetCharacter)
     {
+
     }
 
     public void discoverEnemy(Monster p_Monster)

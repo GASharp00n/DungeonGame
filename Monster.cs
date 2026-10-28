@@ -16,6 +16,8 @@ class Monster : Character, Searchable
 
     private bool m_bSearchDone;
 
+    protected Weapon m_Weapon;
+
     public Item search()
     {
         return null;
