@@ -5,6 +5,10 @@ class Zombie : Monster
     public Zombie() : base(100)
     {
         s_iNbZombieInstances++;
+        if (s_iNbZombieInstances % 5 == 1)
+        {
+            m_Item = new StrengthPotion();
+        }
         m_Weapon = new Bite(10);
         m_sEffectiveWeaponType = "FireArrow";
     }

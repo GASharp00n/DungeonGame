@@ -5,6 +5,10 @@ class Troll : Monster
     public Troll() : base(100)
     {
         s_iNbTrollInstances++;
+        if (s_iNbTrollInstances % 4 == 3)
+        {
+            m_Item = new StrengthPotion();
+        }
         m_Weapon = new Club(10);
         m_sEffectiveWeaponType = "Spear";
     }

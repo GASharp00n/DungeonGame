@@ -5,6 +5,10 @@ class Sorcerer : Monster
     public Sorcerer() : base(100)
     {
         s_iNbSorcererInstances++;
+        if (s_iNbSorcererInstances % 3 == 0)
+        {
+            m_Item = new HealthPotion();
+        }
         m_Weapon = new Lightning(10);
         m_sEffectiveWeaponType = "WaterFlask";
     }
