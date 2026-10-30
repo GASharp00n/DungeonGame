@@ -49,7 +49,7 @@ class Dungeon
             {
                 monster = new Zombie();
             }
-            m_RoomsArray[i] = new Room(monster);
+            m_RoomsArray[i] = new Room(monster, i);
             if (CreationInfo)
             {
                 Console.WriteLine(i + " : " + monster.GetType().Name);

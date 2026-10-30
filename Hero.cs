@@ -39,7 +39,11 @@ class Hero : Character
 
     public void searchForPotions(Searchable p_Searchable)
     {
-
+        Item found = p_Searchable.search();
+        if (found != null)
+        {
+            found.applyEffect(this);
+        }
     }
 
     public Dungeon tryPower(Dungeon p_Dungeon)

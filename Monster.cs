@@ -21,7 +21,22 @@ class Monster : Character, Searchable
 
     public Item search()
     {
-        return null;
+        if (m_bSearchDone == true)
+        {
+            Console.WriteLine("Sorry you have already found everything on this corpse");
+            return null;
+        }
+
+        m_bSearchDone = true;
+
+        if (m_Item == null)
+        {
+            Console.WriteLine("Sorry no potion found on the monster");
+            return null;
+        }
+
+        Console.WriteLine("Congrats, you found a " + m_Item.GetType().Name);
+        return m_Item;
     }
     public Monster(int LP) : base(LP)
     {
