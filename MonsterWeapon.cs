@@ -12,6 +12,7 @@ class MonsterWeapon : Weapon
     }
     public override void inflictDamage(Character p_TargetCharacter)
     {
-
+        Console.WriteLine("The " + GetType().Name + " is inflicting " + m_iAttackPoints + " damages to the heros");
+        p_TargetCharacter.receiveDamages(m_iAttackPoints);
     }
 }

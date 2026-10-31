@@ -32,7 +32,7 @@ class Room : Searchable
         }
         Item found = m_Items[0];
         m_Items.RemoveAt(0);
-        Console.WriteLine("Congrats you found a " + found.GetType().Name);
+        Console.WriteLine("Congrats, you found a " + found.GetType().Name);
         return found;
     }
     public void enterRoom(Hero p_Hero)

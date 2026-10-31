@@ -49,7 +49,8 @@ class Monster : Character, Searchable
 
     public override void attack(Character p_TargetCharacter)
     {
-
+        Console.WriteLine(GetType().Name + " attacks the heros");
+        m_Weapon.inflictDamage(p_TargetCharacter);
     }
 
     public virtual void hitByPower(ReduceLifePower p_Power)
