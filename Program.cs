@@ -9,6 +9,12 @@ class Program
         D.greetHeros(hero);
         Monster[] monsters = D.getAllMonstersFromDungeon();
         monsters[0].attack(hero);
-
+        monsters[0].attack(hero);
+        monsters[0].attack(hero);
+        monsters[0].attack(hero);
+        monsters[0].attack(hero);
+        monsters[0].attack(hero);
+        monsters[0].attack(hero);
+        monsters[0].attack(hero);
     }
 }

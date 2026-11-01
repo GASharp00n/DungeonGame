@@ -12,7 +12,14 @@ class MonsterWeapon : Weapon
     }
     public override void inflictDamage(Character p_TargetCharacter)
     {
+        m_iCriticalCountDown++;
         Console.WriteLine("The " + GetType().Name + " is inflicting " + m_iAttackPoints + " damages to the heros");
         p_TargetCharacter.receiveDamages(m_iAttackPoints);
+        if (m_iCriticalCountDown == s_iMaxRoundBeforeCritical)
+        {
+            Console.WriteLine("Critical attack, twice the damage");
+            m_iCriticalCountDown = 0;
+            p_TargetCharacter.receiveDamages(m_iAttackPoints);
+        }
     }
 }
