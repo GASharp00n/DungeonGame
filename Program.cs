@@ -6,15 +6,8 @@ class Program
     {
         Hero hero = new Hero(500, 25);
         Dungeon D = new Dungeon(25, true);
-        D.greetHeros(hero);
         Monster[] monsters = D.getAllMonstersFromDungeon();
-        monsters[0].attack(hero);
-        monsters[0].attack(hero);
-        monsters[0].attack(hero);
-        monsters[0].attack(hero);
-        monsters[0].attack(hero);
-        monsters[0].attack(hero);
-        monsters[0].attack(hero);
-        monsters[0].attack(hero);
+        D.getRoom(0).enterRoom(hero);
+
     }
 }

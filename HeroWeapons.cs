@@ -9,7 +9,8 @@ class HeroWeapons : Weapon
     }
     public override void inflictDamage(Character p_TargetCharacter)
     {
-        p_TargetCharacter.receiveDamages(m_iAttackPoints);
+        Console.WriteLine("Heros responds to the attack with its " + GetType().Name);
+        p_TargetCharacter.receiveDamages(m_iAttackPoints + m_iAttackBonus);
     }
 
     public void setAttackBonus(int p_iBonus)

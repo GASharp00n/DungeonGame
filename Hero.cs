@@ -19,13 +19,13 @@ class Hero : Character
 
     public override void attack(Character p_TargetCharacter)
     {
-
+        ((HeroWeapons)m_Weapon).setAttackBonus(m_iStrength);
+        m_Weapon.inflictDamage(p_TargetCharacter);
     }
 
     public void discoverEnemy(Monster p_Monster)
     {
         selectWeaponFromArsenal(p_Monster.getEffectiveWeaponType());
-        Console.WriteLine(m_Weapon.GetType().Name);
     }
 
     public void setStrength(int p_iStrength)

@@ -31,6 +31,6 @@ class Character
 
     public bool isalive()
     {
-        return true;
+        return m_iLifePoints > 0;
     }
 }

@@ -37,6 +37,20 @@ class Room : Searchable
     }
     public void enterRoom(Hero p_Hero)
     {
-
+        p_Hero.discoverEnemy(m_RoomMonster);
+        while (p_Hero.isalive() && m_RoomMonster.isalive())
+        {
+            m_RoomMonster.attack(p_Hero);
+            if (p_Hero.isalive())
+            {
+                p_Hero.attack(m_RoomMonster);
+            }
+        }
+        if (p_Hero.isalive())
+        {
+            p_Hero.searchForPotions(this);
+            p_Hero.searchForPotions(this);
+            p_Hero.searchForPotions(m_RoomMonster);
+        }
     }
 }
