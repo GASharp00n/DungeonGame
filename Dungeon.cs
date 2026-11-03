@@ -72,7 +72,16 @@ class Dungeon
 
     public void greetHeros(Hero Heros)
     {
-        Console.WriteLine("Bienvenu kayou " + Heros.getNbLifePoints() + "LP");
+        foreach (Room room in m_RoomsArray)
+        {
+            room.enterRoom(Heros);
+            if (Heros.isalive() == false)
+            {
+                Console.WriteLine("Sorry, you have lost");
+                return;
+            }
+        }
+        Console.WriteLine("Congratulation you have won");
     }
 
     public Monster[] getAllMonstersFromDungeon()
