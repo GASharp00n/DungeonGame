@@ -60,7 +60,7 @@ class Monster : Character, Searchable
 
     public bool isWeaponEfficient(Weapon p_Weapon)
     {
-        return true;
+        return p_Weapon.GetType().Name == m_sEffectiveWeaponType;
     }
 
 

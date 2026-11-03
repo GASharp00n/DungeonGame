@@ -9,6 +9,6 @@ abstract class Item
 
     public void setValue(int p_iValue)
     {
-
+        m_iEffectValue = p_iValue;
     }
 }
