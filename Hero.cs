@@ -19,15 +19,27 @@ class Hero : Character
 
     public override void attack(Character p_TargetCharacter)
     {
-        ((HeroWeapons)m_Weapon).setAttackBonus(m_iStrength);
+        Monster monster = p_TargetCharacter as Monster;
+        if (monster.isWeaponEfficient(m_Weapon) == true)
+        {
+            ((HeroWeapons)m_Weapon).setAttackBonus(m_iStrength);
+        }
+        else
+        {
+            ((HeroWeapons)m_Weapon).setAttackBonus(0);
+        }
         m_Weapon.inflictDamage(p_TargetCharacter);
     }
 
     public void discoverEnemy(Monster p_Monster)
     {
-        selectWeaponFromArsenal(p_Monster.getEffectiveWeaponType());
+        m_Weapon = null;
+        while (m_Weapon == null)
+        {
+            Console.WriteLine("Choose your weapon");
+            selectWeaponFromArsenal(Console.ReadLine());
+        }
     }
-
     public void setStrength(int p_iStrength)
     {
         m_iStrength = p_iStrength;
