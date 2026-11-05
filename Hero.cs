@@ -4,11 +4,13 @@ class Hero : Character
 {
     private int m_iStrength;
 
+    private ReduceLifePower m_Power;
     private List<HeroWeapons> m_Arsenal;
 
     public Hero(int LP, int STR) : base(LP)
     {
         m_iStrength = STR;
+        m_Power = new ReduceLifePower();
         m_Arsenal = new List<HeroWeapons>();
         m_Arsenal.Add(new Sword(10));
         m_Arsenal.Add(new Arrow(10));
@@ -66,9 +68,13 @@ class Hero : Character
         }
     }
 
-    public Dungeon tryPower(Dungeon p_Dungeon)
+    public void tryPower(Dungeon p_Dungeon)
     {
-        throw new NotImplementedException();
+        Monster[] monsters = p_Dungeon.getAllMonstersFromDungeon();
+        foreach (Monster monster in monsters)
+        {
+            monster.hitByPower(m_Power);
+        }
     }
     private void selectWeaponFromArsenal(string p_sWeaponClassName)
     {

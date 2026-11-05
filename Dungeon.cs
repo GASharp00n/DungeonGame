@@ -80,6 +80,7 @@ class Dungeon
                 Console.WriteLine("Sorry, you have lost");
                 return;
             }
+            Heros.tryPower(this);
         }
         Console.WriteLine("Congratulation you have won");
     }
