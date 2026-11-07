@@ -5,6 +5,7 @@ class Hero : Character
     private int m_iStrength;
 
     private ReduceLifePower m_Power;
+
     private List<HeroWeapons> m_Arsenal;
 
     public Hero(int LP, int STR) : base(LP)
@@ -12,17 +13,17 @@ class Hero : Character
         m_iStrength = STR;
         m_Power = new ReduceLifePower();
         m_Arsenal = new List<HeroWeapons>();
-        m_Arsenal.Add(new Sword(10));
-        m_Arsenal.Add(new Arrow(10));
-        m_Arsenal.Add(new WaterFlask(10));
-        m_Arsenal.Add(new Spear(10));
-        m_Arsenal.Add(new FireArrow(10));
+        m_Arsenal.Add(new Sword(20));
+        m_Arsenal.Add(new Arrow(20));
+        m_Arsenal.Add(new WaterFlask(20));
+        m_Arsenal.Add(new Spear(20));
+        m_Arsenal.Add(new FireArrow(20));
     }
 
     public override void attack(Character p_TargetCharacter)
     {
         Monster monster = p_TargetCharacter as Monster;
-        if (monster.isWeaponEfficient(m_Weapon) == true)
+        if (monster.isWeaponEfficient(m_Weapon))
         {
             ((HeroWeapons)m_Weapon).setAttackBonus(m_iStrength);
         }

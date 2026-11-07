@@ -2,7 +2,7 @@ using System;
 
 class Barbarian : Monster
 {
-    public Barbarian() : base(100)
+    public Barbarian() : base(150)
     {
         s_iNbBarbarianInstances++;
         if (s_iNbBarbarianInstances % 2 == 1)

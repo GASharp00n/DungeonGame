@@ -37,9 +37,10 @@ class Room : Searchable
     }
     public void enterRoom(Hero p_Hero)
     {
-        p_Hero.discoverEnemy(m_RoomMonster);
+        Console.WriteLine("A " + m_RoomMonster + " has appeared!");
         while (p_Hero.isalive() && m_RoomMonster.isalive())
         {
+            p_Hero.discoverEnemy(m_RoomMonster);
             m_RoomMonster.attack(p_Hero);
             if (p_Hero.isalive())
             {

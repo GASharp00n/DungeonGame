@@ -2,7 +2,7 @@ using System;
 
 class Zombie : Monster
 {
-    public Zombie() : base(100)
+    public Zombie() : base(80)
     {
         s_iNbZombieInstances++;
         if (s_iNbZombieInstances % 5 == 1)

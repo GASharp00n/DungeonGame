@@ -9,7 +9,7 @@ class Thief : Monster
         {
             m_Item = new HealthPotion();
         }
-        m_Weapon = new Dagger(10);
+        m_Weapon = new Dagger(12);
         m_sEffectiveWeaponType = "Arrow";
     }
     public override void hitByPower(ReduceLifePower p_Power)
