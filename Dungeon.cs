@@ -1,13 +1,17 @@
 using System;
-using System.ComponentModel.DataAnnotations;
-using System.Security.Cryptography.X509Certificates;
 
 class Dungeon
 {
     private Room[] m_RoomsArray;
 
+
     public Dungeon(int NbRooms, bool CreationInfo)
     {
+        Monster.s_iNbZombieInstances = 0;
+        Monster.s_iNbThiefInstances = 0;
+        Monster.s_iNbSorcererInstances = 0;
+        Monster.s_iNbBarbarianInstances = 0;
+        Monster.s_iNbTrollInstances = 0;
 
         m_RoomsArray = new Room[NbRooms];
         for (int i = 0; i < NbRooms; i++)
